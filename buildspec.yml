@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - echo Date before `date`
-      - export $TZ=Asia/Singapore
+      - export TZ=Asia/Singapore
       - echo Date after `date`
       - npm install
   build:
