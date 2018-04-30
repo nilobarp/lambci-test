@@ -3,7 +3,9 @@ phases:
   install:
     commands:
       - echo Date before `date`
-      - export TZ=Asia/Singapore
+      - apk add tzdata --no-cache
+      - cp /usr/share/zoneinfo/Australia/NSW /etc/localtime
+      - echo "Australia/NSW" > /etc/timezone
       - echo Date after `date`
       - npm install
   build:
