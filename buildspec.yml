@@ -2,6 +2,11 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo Date before `date`
+      - apk add tzdata && ls /usr/share/zoneinfo
+      - cp /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+      - echo "Europe/Brussels" >  /etc/timezone
+      - echo Date after `date`
       - npm install
   build:
     commands:
