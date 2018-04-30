@@ -5,7 +5,7 @@ describe("Simple test", () => {
     handler({}, {}, callbackFn);
     expect(callbackFn).toHaveBeenCalledWith(undefined, {
       body: "Hello world",
-      statusCode: 200
+      statusCode: 500
     });
   });
 });
